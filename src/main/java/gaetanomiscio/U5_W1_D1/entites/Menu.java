@@ -1,27 +1,28 @@
 package gaetanomiscio.U5_W1_D1.entites;
 
-public abstract class Menu {
-    protected int calorie;
-    protected double prezzo;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-    public Menu(int calorie, double prezzo) {
-        this.calorie = calorie;
-        this.prezzo = prezzo;
-    }
+import java.util.List;
 
-    public int getCalorie() {
-        return calorie;
-    }
+@Getter
+@Setter
+@AllArgsConstructor
+public class Menu {
+    private List<Pizza> pizzas;
+    private List<Topping> toppings;
+    private List<Drink> drinks;
 
-    public void setCalorie(int calorie) {
-        this.calorie = calorie;
-    }
-
-    public double getPrezzo() {
-        return prezzo;
-    }
-
-    public void setPrezzo(double prezzo) {
-        this.prezzo = prezzo;
+    @Override
+    public String toString() {
+        System.out.println("Menu");
+        System.out.println("Pizzas");
+        pizzas.forEach(System.out::println);
+        System.out.println("Toppings");
+        toppings.forEach(System.out::println);
+        System.out.println("Drinks");
+        drinks.forEach(System.out::println);
+        return "";
     }
 }

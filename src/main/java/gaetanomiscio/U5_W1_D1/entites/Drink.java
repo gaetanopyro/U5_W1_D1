@@ -1,8 +1,23 @@
 package gaetanomiscio.U5_W1_D1.entites;
 
-public class Drink extends Menu {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-    public Drink(int calorie, double prezzo) {
-        super(calorie, prezzo);
+@Getter
+@Setter
+@AllArgsConstructor
+public class Drink {
+    private String name;
+    private int calories;
+    private double price;
+
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "name='" + name + '\'' +
+                ", calories=" + calories +
+                ", price=" + price +
+                '}';
     }
 }

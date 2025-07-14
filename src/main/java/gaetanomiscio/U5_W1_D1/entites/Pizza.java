@@ -7,15 +7,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Topping {
+public class Pizza {
     private String name;
+    private String ingredients;
     private int calories;
     private double price;
 
     @Override
     public String toString() {
-        return "Topping{" +
+        return "Pizza{" +
                 "name='" + name + '\'' +
+                ", ingredients='" + ingredients + '\'' +
                 ", calories=" + calories +
                 ", price=" + price +
                 '}';
