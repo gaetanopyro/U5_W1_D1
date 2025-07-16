@@ -1,16 +1,15 @@
 package gaetanomiscio.U5_W1_D1.entites;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
-public class Drink {
-    private String name;
-    private int calories;
-    private double price;
+public class Drink extends Element {
+    public Drink(String name, int calories, double price) {
+        super(name, calories, price);
+    }
 
     @Override
     public String toString() {
@@ -21,3 +20,7 @@ public class Drink {
                 '}';
     }
 }
+
+
+
+

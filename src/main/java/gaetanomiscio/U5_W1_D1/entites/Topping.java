@@ -1,23 +1,9 @@
 package gaetanomiscio.U5_W1_D1.entites;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+public class Topping extends Element {
 
-@Getter
-@Setter
-@AllArgsConstructor
-public class Topping {
-    private String name;
-    private int calories;
-    private double price;
 
-    @Override
-    public String toString() {
-        return "Topping{" +
-                "name='" + name + '\'' +
-                ", calories=" + calories +
-                ", price=" + price +
-                '}';
+    public Topping(String name, int calories, double price) {
+        super(name, calories, price);
     }
 }

@@ -1,23 +1,24 @@
 package gaetanomiscio.U5_W1_D1.entites;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
-@AllArgsConstructor
-public class Pizza {
-    private String name;
-    private String ingredients;
-    private int calories;
-    private double price;
+public class Pizza extends Element {
+    private List<Topping> toppings;
+
+    public Pizza(String name, int calories, double price) {
+        super(name, calories, price);
+    }
 
     @Override
     public String toString() {
         return "Pizza{" +
-                "name='" + name + '\'' +
-                ", ingredients='" + ingredients + '\'' +
+                "toppings=" + toppings +
+                ", name='" + name + '\'' +
                 ", calories=" + calories +
                 ", price=" + price +
                 '}';
